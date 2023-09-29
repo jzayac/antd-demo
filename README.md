@@ -12,23 +12,18 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+code itself works but there is an issue with @antv/g2 lib dep:
+  d3-array,
+  d3-interpolate 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+which I wasn't able to fix at the moment and 
+I don't want to burn more time on it.
 
-## Learn More
+```Error: require() of ES Module```
 
-To learn more about Next.js, take a look at the following resources:
+here are some links:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://github.com/antvis/G2/issues/4493
+https://nextjs.org/docs/messages/import-esm-externals
+https://github.com/vercel/next.js/discussions/27876
